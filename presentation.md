@@ -1,4 +1,4 @@
-% Haskell 導入から HRR まで
+% Haskell を導入した話, HRR の紹介
 % 日比野 啓
 % 2018-11-10
 
@@ -402,9 +402,8 @@ SELECT ALL
   FROM PUBLIC.my_table T0
 ~~~~~
 
-Demo
-=====
-
+<!-- Demo
+===== -->
 
 
 まとめ
