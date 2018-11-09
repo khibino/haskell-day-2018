@@ -163,7 +163,7 @@ do { p <- person; b <- birthday; guard (P.name p == B.name b)
 2つは同じ意味
 
 
-DSL using Haskell!
+Haskell を使った DSL
 =====
 
 ~~~~~ {.haskell}
@@ -182,13 +182,6 @@ personAndBirthday = relation $ do
   on $ p ! Person.name' .=. b ! Birthday.name'
   return $ (,) |$| p |*| b
 ~~~~~
-
-=====
-
-Haskell のコードは
-SQL との対応が雰囲気で分かれば
-細かいところは気にしなくて大丈夫です
-
 
 組み上がった結合クエリ
 =====
@@ -229,11 +222,16 @@ SELECT ALL T0.name AS f0, T0.age AS f1, T0.family AS f2,
 ~~~~~
 
 
+<!--
+組み上がった結合クエリ - 列多相
 =====
+ -->
 
+<!--
 Haskell のコードは
 SQL との対応が雰囲気で分かれば
 細かいところは気にしなくて大丈夫です。
+ -->
 
 
 例 / 左外部結合

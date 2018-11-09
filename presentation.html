@@ -847,8 +847,8 @@ window.onresize = function(){setTimeout('fontScale()', 50);}</script>
 <a class="sourceLine" id="cb2-6" data-line-number="6">   ; return (p, b) }  <span class="co">-- List モナド</span></a></code></pre></div>
 <p>2つは同じ意味</p>
 </div>
-<div id="dsl-using-haskell" class="slide section level1">
-<h1>DSL using Haskell!</h1>
+<div id="haskell-を使った-dsl" class="slide section level1">
+<h1>Haskell を使った DSL</h1>
 <div class="sourceCode" id="cb3"><pre class="sourceCode haskell"><code class="sourceCode haskell"><a class="sourceLine" id="cb3-1" data-line-number="1">  <span class="kw">do</span> { p <span class="ot">&lt;-</span> person; b <span class="ot">&lt;-</span> birthday; guard (P.name p <span class="fu">==</span> B.name b)</a>
 <a class="sourceLine" id="cb3-2" data-line-number="2">     ; return (p, b) } <span class="co">-- List モナド</span></a></code></pre></div>
 <!-- Building a joined query like list monad: -->
@@ -859,8 +859,6 @@ window.onresize = function(){setTimeout('fontScale()', 50);}</script>
 <a class="sourceLine" id="cb4-4" data-line-number="4">  b <span class="ot">&lt;-</span> query birthday</a>
 <a class="sourceLine" id="cb4-5" data-line-number="5">  on <span class="fu">$</span> p <span class="fu">!</span> Person.name' <span class="fu">.=.</span> b <span class="fu">!</span> Birthday.name'</a>
 <a class="sourceLine" id="cb4-6" data-line-number="6">  return <span class="fu">$</span> (,) <span class="fu">|$|</span> p <span class="fu">|*|</span> b</a></code></pre></div>
-<p>=====</p>
-<p>Haskell のコードは SQL との対応が雰囲気で分かれば 細かいところは気にしなくて大丈夫です</p>
 </div>
 <div id="組み上がった結合クエリ" class="slide section level1">
 <h1>組み上がった結合クエリ</h1>
@@ -887,8 +885,15 @@ window.onresize = function(){setTimeout('fontScale()', 50);}</script>
 <a class="sourceLine" id="cb8-2" data-line-number="2">           T1.name <span class="kw">AS</span> f3, T1.day <span class="kw">AS</span> f4</a>
 <a class="sourceLine" id="cb8-3" data-line-number="3">      <span class="kw">FROM</span> EXAMPLE.person T0 <span class="kw">INNER</span> <span class="kw">JOIN</span> EXAMPLE.birthday T1</a>
 <a class="sourceLine" id="cb8-4" data-line-number="4">        <span class="kw">ON</span> (T0.name = T1.name)</a></code></pre></div>
-<p>=====</p>
-<p>Haskell のコードは SQL との対応が雰囲気で分かれば 細かいところは気にしなくて大丈夫です。</p>
+<!--
+組み上がった結合クエリ - 列多相
+=====
+ -->
+<!--
+Haskell のコードは
+SQL との対応が雰囲気で分かれば
+細かいところは気にしなくて大丈夫です。
+ -->
 </div>
 <div id="例-左外部結合" class="slide section level1">
 <h1>例 / 左外部結合</h1>
