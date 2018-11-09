@@ -64,7 +64,7 @@ Haskell 導入
 書きやすかったもの - テキスト処理
 =====
 
-* Parser Combinator が使いやすいのでテキスト処理が書きやすい
+* Parser Combinator (attoparsec 等) が使いやすいのでテキスト処理が書きやすい
     * トラフィックデータ加工
     * 全文検索システム向けに IRC ログを加工
     * 接続ログの集計
@@ -74,7 +74,7 @@ Haskell 導入
 書きやすかったもの - プロセス制御
 =====
 
-* Parser Combinator でプログラムの出力の解釈も書きやすい
+* Parser Combinator でのプログラム出力の解釈も書きやすい
     * ビルドシステム
         * Debianizing IBM DB2
 	* 内製 Haskell Package
@@ -89,11 +89,22 @@ Haskell 導入
 書きやすかったもの - DSL
 =====
 
-* Monad があるので Domain Specific Language (DSL) が定義しやすい
+* Domain Specific Language (DSL) が定義しやすい
+    * Monad
     * Haskell Relational Record
         * 債権データの集計処理
         * 認証データ管理システム
 
+前半まとめ
+=====
+
+* 最初は Glue 言語の置き換えとして Haskell を導入した
+* 書きやすかったもの
+    * テキスト処理
+    * プロセス制御
+    * マルチスレッド
+    * DSL
+
 Haskell Relational Record の紹介
 =====
 
@@ -101,7 +112,7 @@ Haskell Relational Record の紹介
 Haskell Relational Record の紹介
 =====
 
-ここからは SQL の知識が必要です
+ここからは多少 SQL の知識が必要です
 
 Haskell Relational Record
 =====
@@ -405,10 +416,14 @@ SELECT ALL
 <!-- Demo
 ===== -->
 
-
 まとめ
 =====
 
+* 合成可能性
+    * 組み合わせ可能な DSL で SQL の組み立てができる
+    * 定義の再利用も可能
+* 型安全
+    * 小さなクエリを組み合わせてより大きなクエリを構成するときに、静的型検査によって安全になる
 
 
 Question
