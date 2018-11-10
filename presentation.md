@@ -114,7 +114,7 @@ Haskell Relational Record の紹介
 =====
 
 * ここからは多少 SQL の知識が必要です
-* Haskell のコードは SQL との対応の雰囲気を感じとるくらいで、細かいところは気にしなくて大丈夫です。
+* Haskell のコードは SQL との対応の雰囲気を感じとるくらいで、細かいところは気にしなくて大丈夫です
 
 
 Haskell Relational Record
@@ -233,7 +233,7 @@ SELECT ALL T0.name AS f0, T0.age AS f1, T0.family AS f2,
 <!--
 Haskell のコードは
 SQL との対応が雰囲気で分かれば
-細かいところは気にしなくて大丈夫です。
+細かいところは気にしなくて大丈夫です
  -->
 
 
