@@ -71,6 +71,7 @@ Haskell 導入
     * トラブル対象者のログからの抽出
     * 認証データの加工処理、データ移行
 
+
 書きやすかったもの - プロセス制御
 =====
 
@@ -103,7 +104,7 @@ Haskell 導入
     * テキスト処理
     * プロセス制御
     * マルチスレッド
-    * DSL
+    * Domain Specific Language (DSL)
 
 Haskell Relational Record の紹介
 =====
@@ -112,7 +113,9 @@ Haskell Relational Record の紹介
 Haskell Relational Record の紹介
 =====
 
-ここからは多少 SQL の知識が必要です
+* ここからは多少 SQL の知識が必要です
+* Haskell のコードは SQL との対応の雰囲気を感じとるくらいで、細かいところは気にしなくて大丈夫です。
+
 
 Haskell Relational Record
 =====
@@ -417,7 +420,7 @@ SELECT ALL
 まとめ
 =====
 
-* 合成可能性
+* 合成可能
     * 組み合わせ可能な DSL で SQL の組み立てができる
     * 定義の再利用も可能
 * 型安全
